@@ -1,3 +1,110 @@
+<script module>
+	export const fields = [
+		{
+			label: 'Episode number',
+			name: 'episode_number',
+			type: 'number',
+			required: true
+		},
+		{
+			group: 'Lines',
+			fields: [
+				{
+					label: 'Line 1',
+					name: 'line_1',
+					type: 'text',
+					value: 'Changelog'
+				},
+				{
+					label: 'Line 2',
+					name: 'line_2',
+					type: 'text'
+				},
+				{
+					label: 'Line 3',
+					name: 'line_3',
+					type: 'text'
+				}
+			]
+		},
+		{
+			label: 'Host',
+			name: 'host',
+			type: 'select:hosts'
+		},
+		{
+			group: 'Guest 1',
+			fields: [
+				{
+					label: 'Name',
+					name: 'guest_1_name',
+					type: 'text'
+				},
+				{
+					label: 'Image URL',
+					name: 'guest_1_image_url',
+					type: 'url'
+				},
+				{
+					label: 'Website',
+					name: 'guest_1_website',
+					type: 'url'
+				},
+				{
+					label: 'GitHub username',
+					name: 'guest_1_github',
+					type: 'text'
+				},
+				{
+					label: 'Discord username',
+					name: 'guest_1_discord',
+					type: 'text'
+				},
+				{
+					label: 'Twitter/X username',
+					name: 'guest_1_twitter',
+					type: 'text'
+				}
+			]
+		},
+		{
+			group: 'Guest 2',
+			fields: [
+				{
+					label: 'Name',
+					name: 'guest_2_name',
+					type: 'text'
+				},
+				{
+					label: 'Image URL',
+					name: 'guest_2_image_url',
+					type: 'url'
+				},
+				{
+					label: 'Website',
+					name: 'guest_2_website',
+					type: 'url'
+				},
+				{
+					label: 'GitHub username',
+					name: 'guest_2_github',
+					type: 'text'
+				},
+				{
+					label: 'Discord username',
+					name: 'guest_2_discord',
+					type: 'text'
+				},
+				{
+					label: 'Twitter/X username',
+					name: 'guest_2_twitter',
+					type: 'text'
+				}
+			]
+		}
+	];
+</script>
+
 <script>
 	import all_hosts from '$lib/hosts.js';
 	import all_guests from '$lib/guests.js';
