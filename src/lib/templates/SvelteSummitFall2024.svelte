@@ -12,15 +12,15 @@
 		},
 		{
 			label: 'Speaker name',
+			type: 'text',
 			name: 'speaker_name',
-			value: 'Rich Harris',
-			type: 'text'
+			value: 'Rich Harris'
 		},
 		{
 			label: 'Speaker image URL',
+			type: 'url',
 			name: 'speaker_image_url',
-			value: 'https://pbs.twimg.com/profile_images/557940120184041473/bFyXy8Pu_400x400.jpeg',
-			type: 'url'
+			value: 'https://pbs.twimg.com/profile_images/557940120184041473/bFyXy8Pu_400x400.jpeg'
 		}
 	];
 </script>
@@ -47,14 +47,11 @@
 
 <article
 	class="relative overflow-hidden"
-	style="width:{width}px; height:{height}px; background-color: var(--background-color)"
+	style="width:{width}px; height:{height}px; background-color:var(--background-color)"
 >
 	<div class="absolute inset-0 z-10 p-20">
 		<div class="flex justify-between">
-			<div
-				class="p-4 overflow-hidden rounded-full w-96 h-96"
-				style="background-color: var(--accent-color);"
-			>
+			<div class="p-4 overflow-hidden rounded-full w-96 h-96" style="background-color: var(--accent-color);">
 				<img class="overflow-hidden rounded-full" src={data?.speaker_image_url} />
 			</div>
 			<div class="text-right text-white text-7xl anton-regular">
@@ -63,7 +60,7 @@
 				<div style="color:var(--accent-color)">FALL</div>
 			</div>
 		</div>
-		<div class="mt-8 font-semibold text-8xl" style="color: var(--accent-color);">
+		<div class="mt-8 font-semibold text-8xl" style="color:var(--accent-color);">
 			{data?.speaker_name}
 		</div>
 		<div>

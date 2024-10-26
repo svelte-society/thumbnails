@@ -2,103 +2,103 @@
 	export const fields = [
 		{
 			label: 'Episode number',
-			name: 'episode_number',
 			type: 'number',
+			name: 'episode_number',
 			required: true
 		},
 		{
-			group: 'Lines',
+			legend: 'Lines',
 			fields: [
 				{
 					label: 'Line 1',
-					name: 'line_1',
 					type: 'text',
+					name: 'line_1',
 					value: 'Changelog'
 				},
 				{
 					label: 'Line 2',
-					name: 'line_2',
-					type: 'text'
+					type: 'text',
+					name: 'line_2'
 				},
 				{
 					label: 'Line 3',
-					name: 'line_3',
-					type: 'text'
+					type: 'text',
+					name: 'line_3'
 				}
 			]
 		},
 		{
 			label: 'Host',
-			name: 'host',
-			type: 'select:hosts'
+			type: 'select:hosts',
+			name: 'host'
 		},
 		{
-			group: 'Guest 1',
+			legend: 'Guest 1',
 			fields: [
 				{
 					label: 'Name',
-					name: 'guest_1_name',
-					type: 'text'
+					type: 'text',
+					name: 'guest_1_name'
 				},
 				{
 					label: 'Image URL',
-					name: 'guest_1_image_url',
-					type: 'url'
+					type: 'url',
+					name: 'guest_1_image_url'
 				},
 				{
 					label: 'Website',
-					name: 'guest_1_website',
-					type: 'url'
+					type: 'url',
+					name: 'guest_1_website'
 				},
 				{
 					label: 'GitHub username',
-					name: 'guest_1_github',
-					type: 'text'
+					type: 'text',
+					name: 'guest_1_github'
 				},
 				{
 					label: 'Discord username',
-					name: 'guest_1_discord',
-					type: 'text'
+					type: 'text',
+					name: 'guest_1_discord'
 				},
 				{
 					label: 'Twitter/X username',
-					name: 'guest_1_twitter',
-					type: 'text'
+					type: 'text',
+					name: 'guest_1_twitter'
 				}
 			]
 		},
 		{
-			group: 'Guest 2',
+			legend: 'Guest 2',
 			fields: [
 				{
 					label: 'Name',
-					name: 'guest_2_name',
-					type: 'text'
+					type: 'text',
+					name: 'guest_2_name'
 				},
 				{
 					label: 'Image URL',
-					name: 'guest_2_image_url',
-					type: 'url'
+					type: 'url',
+					name: 'guest_2_image_url'
 				},
 				{
 					label: 'Website',
-					name: 'guest_2_website',
-					type: 'url'
+					type: 'url',
+					name: 'guest_2_website'
 				},
 				{
 					label: 'GitHub username',
-					name: 'guest_2_github',
-					type: 'text'
+					type: 'text',
+					name: 'guest_2_github'
 				},
 				{
 					label: 'Discord username',
-					name: 'guest_2_discord',
-					type: 'text'
+					type: 'text',
+					name: 'guest_2_discord'
 				},
 				{
 					label: 'Twitter/X username',
-					name: 'guest_2_twitter',
-					type: 'text'
+					type: 'text',
+					name: 'guest_2_twitter'
 				}
 			]
 		}
