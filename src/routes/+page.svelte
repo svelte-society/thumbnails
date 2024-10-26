@@ -19,12 +19,8 @@
 		data = json;
 	}
 
-	/**
-	 *
-	 * @param {HTMLElement} element
-	 * @param param1
-	 */
-	function scale(parent, { padding } = {}) {
+	/** @param {HTMLElement} parent */
+	function scale(parent) {
 		if (!parent.firstElementChild) return;
 
 		const original_width = parent.firstElementChild.getBoundingClientRect().width;
@@ -56,23 +52,30 @@
 	</div>
 	<div class="w-1/3 overflow-hidden" hidden={$page.url.searchParams.has('_full')}>
 		<div class="p-6">
-			<h1 class="text-2xl font-semibold">Omni Thumbnail</h1>
+			<h1 class="mb-6 text-2xl font-semibold">Omni Thumbnail</h1>
 
 			<form method="POST" action="" oninput={get_values} onchange={get_values}>
 				<div class="flex flex-col gap-3">
-					<div>
-						<label class="block text-sm font-medium leading-6 text-gray-900" for="template"> Template </label>
-						<select
-							class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-							name="_template"
-							id="template"
-							bind:value={template_name}
-						>
+					<fieldset>
+						<legend class="text-sm font-semibold leading-6 text-gray-900">Template</legend>
+						<div class="mt-1 space-y-6">
 							{#each templates as [name, module]}
-								<option value={name}>{name}</option>
+								<div class="flex items-center gap-x-3">
+									<input
+										id="push-everything"
+										name="_template"
+										value={name}
+										type="radio"
+										bind:group={template_name}
+										class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-600"
+									/>
+									<label for="push-everything" class="block text-sm font-medium leading-6 text-gray-900">
+										{module.title}
+									</label>
+								</div>
 							{/each}
-						</select>
-					</div>
+						</div>
+					</fieldset>
 
 					{#each selected_template.fields as field}
 						{#if field.legend}

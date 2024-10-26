@@ -1,4 +1,6 @@
 <script module>
+	export const title = 'Svelte Summit Fall 2024';
+
 	export const width = 1920;
 
 	export const height = 1080;
