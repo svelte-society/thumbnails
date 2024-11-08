@@ -9,26 +9,33 @@
 		{
 			label: 'Title',
 			name: 'title',
-			value: 'Svelte 5 is alive',
 			type: 'text'
 		},
 		{
-			label: 'Speaker name',
+			label: 'Speaker 1 name',
 			type: 'text',
-			name: 'speaker_name',
-			value: 'Rich Harris'
+			name: 'speaker_name_1'
 		},
 		{
-			label: 'Speaker image URL',
+			label: 'Speaker 1 image URL',
 			type: 'url',
-			name: 'speaker_image_url',
-			value: 'https://pbs.twimg.com/profile_images/557940120184041473/bFyXy8Pu_400x400.jpeg'
+			name: 'speaker_image_url_1'
+		},
+		{
+			label: 'Speaker 2 name',
+			type: 'text',
+			name: 'speaker_name_2'
+		},
+		{
+			label: 'Speaker 2 image URL',
+			type: 'url',
+			name: 'speaker_image_url_2'
 		}
 	];
 </script>
 
 <script>
-	const { data } = $props();
+	const { values } = $props();
 </script>
 
 <svelte:head>
@@ -53,23 +60,32 @@
 >
 	<div class="absolute inset-0 z-10 p-20">
 		<div class="flex justify-between">
-			<div class="p-4 overflow-hidden rounded-full w-96 h-96" style="background-color: var(--accent-color);">
-				<img class="overflow-hidden rounded-full" src={data?.speaker_image_url} />
+			<div class="flex gap-6">
+				{#if values.speaker_image_url_1}
+					<div class="p-4 overflow-hidden rounded-full w-96 h-96" style="background-color: var(--accent-color);">
+						<img class="overflow-hidden rounded-full" src={values?.speaker_image_url_1} />
+					</div>
+				{/if}
+				{#if values.speaker_image_url_2}
+					<div class="p-4 overflow-hidden rounded-full w-96 h-96" style="background-color: var(--accent-color);">
+						<img class="overflow-hidden rounded-full" src={values?.speaker_image_url_2} />
+					</div>
+				{/if}
 			</div>
-			<div class="text-right text-white text-7xl anton-regular">
+			<div class="text-right text-white text-8xl anton-regular">
 				<div>SVELTE</div>
 				<div>SUMMIT</div>
 				<div style="color:var(--accent-color)">FALL</div>
 			</div>
 		</div>
 		<div class="mt-8 font-semibold text-8xl" style="color:var(--accent-color);">
-			{data?.speaker_name}
+			{[values?.speaker_name_1, values?.speaker_name_2].filter(Boolean).join(', ')}
 		</div>
 		<div>
 			<h1
 				class="flex justify-between mt-10 font-extrabold leading-tight text-white dm-serif-display-regular align-center text-9xl"
 			>
-				{data?.title}
+				{values?.title}
 			</h1>
 		</div>
 	</div>

@@ -33,5 +33,10 @@ export default [
 		name: 'Pedro Borges',
 		twitter: 'pedroborg_es',
 		image:'https://pbs.twimg.com/profile_images/1538337396479123456/buYLUd22_400x400.jpg'
+	},
+	{
+		name: 'Bruno',
+		image: 'https://avatars.githubusercontent.com/u/6626184?v=4',
+		github: 'brunobuddy'
 	}
 ];

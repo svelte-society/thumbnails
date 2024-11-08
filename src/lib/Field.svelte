@@ -3,8 +3,6 @@
 	 * @type {{ label: string, type: string, name: string, value: string | undefined, required: true | undefined }}
 	 */
 	const { label, type, name, value, required } = $props();
-
-	import options from '$lib/options';
 </script>
 
 {#if type === 'radio'}
