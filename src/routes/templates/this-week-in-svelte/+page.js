@@ -3,12 +3,12 @@ export async function load(event) {
 	const data = event.url.searchParams.get('data');
 
 	const {
-		episode_number = 100,
+		episode_number = 88,
 		hosts = ['Paolo Ricciuti'],
-		guests = ['Bruno'],
+		guests = [],
 		content = [
 			'Changelog',
-			'Showcase: manifest.build'
+			'Live coding local storage'
 		]
 	} = data ? JSON.parse(data) : {};
 

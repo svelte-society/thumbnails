@@ -38,5 +38,15 @@ export default [
 		name: 'Bruno',
 		image: 'https://avatars.githubusercontent.com/u/6626184?v=4',
 		github: 'brunobuddy'
+	},
+	{
+		name: 'Thomas G. Lopes',
+		image: 'https://avatars.githubusercontent.com/u/26071571?v=4',
+		bluesky: 'thomas.rocks'
+	},
+	{
+		name: 'Holger Dal Mogensen',
+		github: 'sockmaster27',
+		image: 'https://avatars.githubusercontent.com/u/61235930?v=4'
 	}
 ];

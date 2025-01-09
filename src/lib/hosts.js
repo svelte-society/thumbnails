@@ -7,7 +7,7 @@ export default [
 	{
 		name: 'Paolo Ricciuti',
 		image: '/hosts/paolo.webp',
-		twitter: 'PaoloRicciuti'
+		bluesky: 'paolo.ricciuti.me'
 	},
 	{
 		name: 'Stanislav Khromov',
