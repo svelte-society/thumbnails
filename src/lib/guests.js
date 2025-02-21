@@ -69,7 +69,7 @@ export default [
 	},
 	{
 		name: 'Alexander Demin',
-		github: 'https://github.com/begoon',
+		github: 'begoon',
 		image: 'https://avatars.githubusercontent.com/u/84461?v=4'
 	}
 ];
