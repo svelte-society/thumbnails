@@ -8,7 +8,7 @@ export async function load(event) {
 		guests = ['Alexander Demin'],
 		content = [
 			'Changelog',
-			'Go + Svelte as a hybrid SPA/MPA application'
+			'Showcase: Go + Svelte as a hybrid SPA/MPA application'
 		]
 	} = data ? JSON.parse(data) : {};
 
